@@ -118,25 +118,19 @@ form {
   display: inline-block;
   position: relative;
   box-sizing: border-box;
-  animation: rotation 1s linear infinite;
-}
-.loader::after {
-  content: '';
-  box-sizing: border-box;
-  position: absolute;
-  left: 50%;
-  top: 0;
-  background: #ff3d00;
-  width: 3px;
-  height: 24px;
-  transform: translateX(-50%);
+  animation: rotation 3s linear infinite;
 }
 
-@keyframes rotation {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+
+.load {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.to-add {
+  display: flex;
+  margin-inline: auto;
+}
+.disappear {
+  display: none;
 }

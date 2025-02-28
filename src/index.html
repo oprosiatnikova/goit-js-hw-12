@@ -3,7 +3,6 @@
 
 <head>
   <meta charset="UTF-8" />
-  <!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Image search</title>
   <link href="https://fonts.cdnfonts.com/css/montserrat" rel="stylesheet" />
@@ -12,16 +11,18 @@
   <link rel="stylesheet" href="./css/styles.css" />
 </head>
 
+
 <body>
   <main>
     <form class="form">
       <input type="text" class="user-input" placeholder="Введіть ключове слово..." />
       <button type="submit" class="submit-button">Пошук</button>
     </form>
-    <div class="gallery"></div>
+    <ul class="gallery"></ul>
+    <div class="load"></div>
+    <button class="submit-button to-add disappear">Пошук</button>
 
-  </main>
-  <script type="module" src="./main.js"></script>
+    <script type="module" src="./main.js"></script>
 </body>
 
 </html>

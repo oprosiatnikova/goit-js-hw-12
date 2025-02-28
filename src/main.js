@@ -1,10 +1,18 @@
-import { getImage } from './js/pixabay-api';
-import errorIcon from './img/icon.svg';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
+import { getImage } from './js/pixabay-api';
+import { resetPage } from './js/pixabay-api';
+import { addPage } from './js/pixabay-api';
+import { addLoadStroke } from './js/render-functions';
+import errorIcon from './img/icon.svg';
 
 
-export const iziOption = {
+const box = document.querySelector('.gallery');
+const load = document.querySelector('.load');
+const addMoreButton = document.querySelector('.to-add');
+const form = document.querySelector('.form');
+const input = document.querySelector('.user-input');
+const iziOption = {
   messageColor: '#FAFAFB',
   messageSize: '16px',
   backgroundColor: '#EF4040',
@@ -15,19 +23,25 @@ export const iziOption = {
   closeOnClick: true,
 };
 
-document.querySelector('.form').addEventListener('submit', event => {
-  const input = document.querySelector('.user-input').value.trim();
-  const box = document.querySelector('.gallery');
+form.addEventListener('submit', event => {
   event.preventDefault();
-
-  if (!input) {
+  let inputValue = input.value.trim();
+  if (!inputValue) {
     iziToast.show({
       ...iziOption,
-      message: 'Будь ласка, введіть пошуковий запит',
+      message: 'Будь ласка, введіть пошуковий запит.',
     });
     return;
   }
-  box.innerHTML =
-    '<p>Зачекайте, зображення завантажується</p><span class="loader"></span>';
-  getImage(input);
+  box.innerHTML = '';
+  resetPage();
+  addLoadStroke(load);
+  getImage(inputValue);
+});
+
+addMoreButton.addEventListener('click', event => {
+  let inputValue = input.value.trim();
+  addPage();
+  addLoadStroke(load);
+  getImage(inputValue);
 });

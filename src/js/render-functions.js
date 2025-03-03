@@ -21,9 +21,9 @@ const iziOption = {
 export function addLoadStroke(daddyElement) {
   daddyElement.insertAdjacentHTML(
     'beforeend',
-    '<p class="loading-text">Зачекайте, зображення завантажується...</p><span class="loader"></span>'
+    '<p class="loading-text">Завантаження</p><span class="loader"></span>'
   );
-  addMoreButton.classList.add('disappear');
+  addMoreButton.classList.add('hide');
 }
 
 export function removeLoadStroke(daddyElement) {

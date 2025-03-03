@@ -110,7 +110,7 @@ form {
   line-height: 24px;
 }
 
-.loader {
+.loader::after {
   width: 48px;
   height: 48px;
   border: 2px solid #fff;
@@ -119,9 +119,6 @@ form {
   position: relative;
   box-sizing: border-box;
   animation: rotation 3s linear infinite;
-}
-.loader::after {
-  content: '';
 }
 
 .load {

@@ -19,7 +19,7 @@ const iziOption = {
   closeOnClick: true,
 };
 let page = 1;
-let perPage = 15;
+let perPage = 40;
 
 export function resetPage() {
   page = 1;
@@ -34,7 +34,7 @@ function endOfList(daddyElement) {
     'beforeend',
     '<p class="loading-text">Вибачте, але ви досягли кінця результатів пошуку.</p>'
   );
-  addMoreButton.classList.add('disappear');
+  addMoreButton.classList.add('hide');
 }
 
 export async function getImage(input) {

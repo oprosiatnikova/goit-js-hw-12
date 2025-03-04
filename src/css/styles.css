@@ -125,11 +125,16 @@ form {
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 .to-add {
   display: flex;
   margin-inline: auto;
+  
 }
 .hide {
   display: none;
 }
+
+
+

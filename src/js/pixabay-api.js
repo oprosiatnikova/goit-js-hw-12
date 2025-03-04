@@ -28,14 +28,7 @@ export function addPage() {
   page += 1;
 }
 
-function endOfList(daddyElement) {
-  removeLoadStroke(daddyElement);
-  daddyElement.insertAdjacentHTML(
-    'beforeend',
-    '<p class="loading-text">Вибачте, але ви досягли кінця результатів пошуку.</p>'
-  );
-  addMoreButton.classList.add('hide');
-}
+
 
 export async function getImage(input) {
   const API_KEY = '48917543-f1c12d43491f3df9d7e0ece6c';
@@ -76,4 +69,14 @@ export async function getImage(input) {
     });
     return;
   }
+}
+
+    
+function endOfList(daddyElement) {
+  removeLoadStroke(daddyElement);
+  daddyElement.insertAdjacentHTML(
+    'beforeend',
+    '<p class="loading-text">Вибачте, але ви досягли кінця результатів пошуку.</p>'
+  );
+  addMoreButton.classList.add('hide');
 }

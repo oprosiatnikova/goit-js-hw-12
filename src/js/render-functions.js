@@ -4,9 +4,11 @@ import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 import errorIcon from '../img/icon.svg';
 
+
 const box = document.querySelector('.gallery');
 const load = document.querySelector('.load');
 const addMoreButton = document.querySelector('.to-add');
+
 const iziOption = {
   messageColor: '#FAFAFB',
   messageSize: '16px',
@@ -21,7 +23,7 @@ const iziOption = {
 export function addLoadStroke(daddyElement) {
   daddyElement.insertAdjacentHTML(
     'beforeend',
-    '<p class="loading-text">Завантаження...</p><span class="loader"></span>'
+    '<p class="loading-text">Завантаження</p><span class="loader"></span>'
   );
   addMoreButton.classList.add('hide');
 }
@@ -46,9 +48,10 @@ export function markup(data) {
         'На жаль, немає зображень, які відповідають вашому пошуковому запиту. Будь ласка, спробуйте ще раз!',
     });
     box.innerHTML = '';
-
-    return;
+   
   }
+
+  
   const markup = hits
     .map(
       image =>
@@ -78,3 +81,16 @@ export function markup(data) {
   });
   lightbox.refresh();
 }
+
+
+
+
+
+
+
+  
+
+
+  
+
+

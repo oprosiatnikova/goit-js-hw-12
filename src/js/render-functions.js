@@ -9,6 +9,7 @@ const box = document.querySelector('.gallery');
 const load = document.querySelector('.load');
 const addMoreButton = document.querySelector('.to-add');
 
+
 const iziOption = {
   messageColor: '#FAFAFB',
   messageSize: '16px',
@@ -42,14 +43,19 @@ export function markup(data) {
   const { hits } = data;
 
   if (hits.length === 0) {
+    box.innerHTML = '';
+    load.innerHTML = '';
+
+    loadTextElements.forEach(element => element.remove());
+
     iziToast.show({
       ...iziOption,
       message:
-        'На жаль, немає зображень, які відповідають вашому пошуковому запиту. Будь ласка, спробуйте ще раз!',
+        'На жаль, немає зображень, які відповідають вашому пошуковому запиту. Будь ласка, спробуйте ще раз!'
     });
-    box.innerHTML = '';
-   
+    return;
   }
+
 
   
   const markup = hits

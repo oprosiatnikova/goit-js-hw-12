@@ -46,6 +46,7 @@ export async function getImage(input) {
 
   try {
     const { data } = await axios.get(URL);
+    
     markup(data);
     if (data.totalHits < page * perPage) {
       endOfList(load);
@@ -63,6 +64,7 @@ export async function getImage(input) {
     console.error(error);
     box.innerHTML = '';
     load.innerHTML = '';
+    
     
     iziToast.show({
       ...iziOption,

@@ -24,7 +24,7 @@ const iziOption = {
 export function addLoadStroke(daddyElement) {
   daddyElement.insertAdjacentHTML(
     'beforeend',
-    '<p class="loading-text">Завантаження</p>'
+    '<p class="loading-text">Зображення завантажуються</p>'
   );
   addMoreButton.classList.add('hide');
 }
@@ -37,6 +37,7 @@ export function removeLoadStroke(daddyElement) {
   if (loaderElement) loaderElement.remove();
 
   addMoreButton.classList.remove('hide');
+  daddyElement.innerHTML = '';
 }
 
 export function markup(data) {

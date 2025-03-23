@@ -6,7 +6,7 @@ import errorIcon from '../img/icon.svg';
 
 
 const box = document.querySelector('.gallery');
-const load = document.querySelector('.load');
+const load = document.querySelector('.loader');
 const addMoreButton = document.querySelector('.to-add');
 
 
@@ -24,7 +24,7 @@ const iziOption = {
 export function addLoadStroke(daddyElement) {
   daddyElement.insertAdjacentHTML(
     'beforeend',
-    '<p class="loading-text">Зображення завантажуються</p>'
+    '<p class="loading-text">Loading images, please wait...</p>'
   );
   addMoreButton.classList.add('hide');
 }
@@ -52,7 +52,7 @@ export function markup(data) {
     iziToast.show({
       ...iziOption,
       message:
-        'На жаль, немає зображень, які відповідають вашому пошуковому запиту. Будь ласка, спробуйте ще раз!'
+        'Sorry, no images were found for your request.'
     });
     return;
   }

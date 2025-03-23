@@ -6,7 +6,7 @@ import { removeLoadStroke } from './render-functions';
 import errorIcon from '../img/icon.svg';
 
 const box = document.querySelector('.gallery');
-const load = document.querySelector('.load');
+const load = document.querySelector('.loader');
 const addMoreButton = document.querySelector('.to-add');
 const iziOption = {
   messageColor: '#FAFAFB',
@@ -68,7 +68,7 @@ export async function getImage(input) {
     
     iziToast.show({
       ...iziOption,
-      message: 'Вибачте, сталася помилка. Спробуйте знову!',
+      message: 'Sorry, an error occurred. Please try again!',
     });
     return;
   }
@@ -79,7 +79,7 @@ function endOfList(daddyElement) {
   removeLoadStroke(daddyElement);
   daddyElement.insertAdjacentHTML(
     'beforeend',
-    '<p class="loading-text">Вибачте, але ви досягли кінця результатів пошуку.</p>'
+    '<p class="loading-text">We are sorry, but you have reached the end of search results.</p>'
   );
   addMoreButton.classList.add('hide');
 }

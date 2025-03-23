@@ -111,22 +111,11 @@ form {
 }
 
 .loader {
-  width: 48px;
-  height: 48px;
-  border: 2px solid #fff;
-  border-radius: 50%;
-  display: inline-block;
-  position: relative;
-  box-sizing: border-box;
-  animation: rotation 3s linear infinite;
-}
-
-.load {
-  display: flex;
+ display: flex;
   align-items: center;
-  justify-content: center;
-  
-}
+  justify-content: center;    
+  } 
+
 .to-add {
   display: flex;
   margin-inline: auto;
@@ -136,11 +125,13 @@ form {
   display: none;
 }
 .loading-text {
-text-align: center;
+text-align: center;    
 font-weight: 400;
 font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.04em;
 color: #2e2f42;
+ 
+
 }
 

@@ -6,7 +6,7 @@ import errorIcon from '../img/icon.svg';
 
 
 const box = document.querySelector('.gallery');
-const load = document.querySelector('.load');
+const load = document.querySelector('.loader');
 const addMoreButton = document.querySelector('.to-add');
 
 
@@ -24,7 +24,7 @@ const iziOption = {
 export function addLoadStroke(daddyElement) {
   daddyElement.insertAdjacentHTML(
     'beforeend',
-    '<p class="loading-text">Loading images, please wait... </p><span class="loader"></span>'
+    '<p class="loading-text">Loading images, please wait... </p><span class="load"></span>'
   );
   addMoreButton.classList.add('hide');
 }
@@ -88,10 +88,6 @@ export function markup(data) {
   });
   lightbox.refresh();
 }
-
-
-
-
 
 
 

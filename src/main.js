@@ -8,7 +8,7 @@ import errorIcon from './img/icon.svg';
 
 
 const box = document.querySelector('.gallery');
-const load = document.querySelector('.load');
+const load = document.querySelector('.loader');
 const addMoreButton = document.querySelector('.to-add');
 const form = document.querySelector('.form');
 const input = document.querySelector('.user-input');

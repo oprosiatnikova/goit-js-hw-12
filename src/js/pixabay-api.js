@@ -6,7 +6,7 @@ import { removeLoadStroke } from './render-functions';
 import errorIcon from '../img/icon.svg';
 
 const box = document.querySelector('.gallery');
-const load = document.querySelector('.loader');
+const load = document.querySelector('.load');
 const addMoreButton = document.querySelector('.to-add');
 const iziOption = {
   messageColor: '#FAFAFB',
@@ -19,7 +19,7 @@ const iziOption = {
   closeOnClick: true,
 };
 let page = 1;
-let perPage = 40;
+let perPage = 15;
 
 export function resetPage() {
   page = 1;
